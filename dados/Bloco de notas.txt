@@ -1,0 +1,111 @@
+Resumo:
+
+Construiremos um sistema de gerenciamento de estoque em Django. 
+Este projeto abrange a construção de uma interface utilizando bootstrap, 
+integração com Chartjs para visualização de dados da interface e as funcionalidades CRUD de uma aplicação baseada em banco de dados. 
+
+
+
+Este projeto é uma aplicação web desenvolvida com o framework Django em Python. Ele parece ser um sistema de gestão de produtos e pedidos, com diferentes funcionalidades para usuários comuns e administradores.
+
+As funcionalidades incluem:
+
+Registro e autenticação de usuários usando o modelo de autenticação padrão do Django.
+Modelos de dados para produtos e pedidos, onde os produtos têm nome, categoria e quantidade, e as ordens têm referências aos produtos, à equipe responsável e à quantidade pedida.
+Um painel de administração com URLs específicas para administradores, onde eles podem visualizar dados, como produtos, e realizar operações de CRUD (Criar, Ler, Atualizar, Excluir).
+Visualização de dados utilizando gráficos gerados com a biblioteca Chart.js para apresentar estatísticas relacionadas aos produtos e pedidos.
+Além disso, o projeto inclui arquivos HTML para renderizar as páginas da aplicação, juntamente com o uso do framework Bootstrap para estilos e layouts responsivos.
+
+projeto permite que os administradores monitorem e gerenciem os produtos disponíveis, as ordens feitas pelos funcionários e possivelmente outras atividades relacionadas ao negócio. 
+Isso inclui a capacidade de adicionar, editar, visualizar e excluir produtos e pedidos, além de fornecer visualizações gráficas para análise de dados.
+
+Portanto. O sistema fornece as ferramentas necessárias para supervisionar e gerenciar as atividades dos funcionários em relação aos produtos e pedidos da empresa.
+---------------------------------------------------------------------------------------------------------------------------
+
+
+Parte 1: 
+Por que usar Django? e quais as grandes empresas que usam python django em suas aplicações: 
+
+Django é um framework web de alto nível, escrito em Python, que incentiva o desenvolvimento rápido e limpo de aplicações web. Existem várias razões pelas quais as pessoas optam por usar Django:
+
+Rápido desenvolvimento: Django oferece um conjunto abrangente de funcionalidades pré-construídas, como autenticação de usuário, administração do site, ORM (Object-Relational Mapping), entre outros. Isso acelera o processo de desenvolvimento, permitindo que os desenvolvedores se concentrem em escrever código específico para suas aplicações.
+
+Segurança: Django vem com várias medidas de segurança integradas para ajudar a proteger as aplicações contra ameaças comuns da web, como injeção de SQL, XSS (Cross-Site Scripting), CSRF (Cross-Site Request Forgery), entre outros.
+
+Escalabilidade: Django é altamente escalável e pode ser utilizado para construir aplicações que podem lidar com grandes volumes de tráfego e dados.
+
+Comunidade e documentação: Django possui uma comunidade ativa e uma excelente documentação, o que facilita para os desenvolvedores encontrar suporte e recursos quando necessário.
+
+Versatilidade: Django pode ser usado para construir uma ampla gama de aplicações web, desde sites simples até plataformas complexas e de grande escala.
+
+Quanto às grandes empresas que utilizam Python Django em suas aplicações, algumas das mais conhecidas incluem:
+
+Instagram: O Instagram, uma das maiores redes sociais do mundo, utiliza Django em grande parte de sua infraestrutura web.
+
+Pinterest: O Pinterest, uma plataforma de descoberta visual, é outro exemplo de uma grande empresa que usa Django em suas aplicações.
+
+Spotify: Embora o Spotify seja conhecido principalmente como um serviço de streaming de música, eles também utilizam Django em partes de sua infraestrutura web.
+
+Eventbrite: A Eventbrite, uma plataforma de organização e venda de ingressos para eventos, é outro exemplo de uma empresa que confia em Django para suas aplicações.
+
+Disqus: O Disqus, um sistema de comentários usado por muitos sites em todo o mundo, é construído em cima do Django.
+
+Esses são apenas alguns exemplos, mas muitas outras empresas de todos os tamanhos e em várias indústrias utilizam Django em suas aplicações web devido à sua eficiência, segurança e escalabilidade.
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Parte 2:
+Django Architectural Framework. Conceitos básicos de visualizações e URL e como criar um. 
+
+A arquitetura do Django segue o padrão de arquitetura Model-View-Controller (MVC), mas com uma variação chamada Model-View-Template (MVT):
+
+Model: O Model em Django representa a camada de dados da aplicação. Ele define a estrutura e a lógica para interagir com o banco de dados. Os modelos são geralmente definidos como classes Python que mapeiam para tabelas no banco de dados relacional.
+
+View: As Views em Django são responsáveis por processar solicitações do cliente e retornar uma resposta. As views geralmente aceitam solicitações HTTP (GET, POST, etc.), interagem com o modelo conforme necessário e retornam uma resposta, geralmente em HTML.
+
+Template: Os Templates em Django são responsáveis pela apresentação dos dados para o usuário. Eles são arquivos HTML que incluem tags e filtros especiais do Django que permitem a inserção dinâmica de dados recuperados do modelo e processados pela view.
+
+Além desses componentes principais, Django também inclui um poderoso sistema de administração, middleware para processar solicitações e respostas antes e depois de passarem pelas views, e rotas definidas em um arquivo de URLs para mapear URLs para views específicas.
+
+Resumindo, a arquitetura do Django é composta por:
+
+Model: Representa a camada de dados.
+View: Processa solicitações e retorna respostas.
+Template: Apresenta os dados para o usuário.
+Esses componentes trabalham juntos para facilitar o desenvolvimento de aplicações web de forma rápida, segura e escalável.
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+Parte 3:
+
+Modelos Django e herança. Construindo modelos HTML na pasta templates usando bootstrap.
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Parte 4:
+Construindo todo o Dashboard do Sistema de Gestão de Estoque. Usando tags de modelo, estendendo a herança de modelo e completando os links de URL. 
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Parte 5:
+
+Usando python manage.py makemigrations
+
+Usando python manage.py migrate
+
+python manage.py runserver
+
+Criando um super usuário: python manage.py createsuperuser
+usuário: admin
+email: admin@gmail.com
+senha: admin
+
+
+
+
+-----------------------------------

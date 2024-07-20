@@ -1,0 +1,105 @@
+SistemaGerenciamentoMedico:
+
+Comando inicial: django-admin startproject SistemaGerenciamentoMedico
+
+python manage.py runserver
+
+django-admin startapp DjangoMedicalApp
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py createsuperuser
+usuário: admin
+email: admin@gmail.com
+senha: admin
+
+usuário: admin2
+email: admin2@gmail.com
+senha: admin2
+
+
+
+Overwiew: 
+
+Nome do proejto -> 
+
+                                                                        PharmacyStore - Solução de Gestão farmacêutica 
+
+
+
+Projeto usando Django, Sqlite, Django Rest Framework e React JS. Portanto, este projeto é usado em lojas médicas - Farmácias para gerênciamento de loja.
+
+este projeto será usado em uma loja médica para gerenciar sua loja. então aqui estão todos os recursos deste projeto
+> gerenciamento de estoque de medicamentos (entrada, visualização, atualização)
+> gerenciamento de vendas com geração de relatório de faturas
+> gestão de clientes
+> visualizar relatório de vendas
+> gestão de empresas de medicina 
+> gestão de funcionários
+> venda de remédios
+> gerar conta médica
+> adicionar medicamento em estoque 
+
+tabelas: 
+> medicamento
+
+> empresa
+
+> detalhes médicos
+
+> login de administrador
+
+> funcionário
+
+> cliente
+
+> conta
+
+> salário do funcionário
+
+> detalhes da fatura
+
+> pedido do cliente
+
+> conta da empresa
+
+> banco da empresa
+
+> banco de funcionários
+
+
+Tecnologias:
+Em geral, será criado e usado API Rest para várias funcionalidades no decorrer da criação do sistema. 
+
+> API de teste do framework Django Rest | API do token JWT -> é uma ferramenta para autenticação de usuários em aplicativos web. 
+Ela utiliza tokens JWT, que são tokens criptografados contendo informações do usuário, como ID e permissões. Esses tokens são enviados pelo cliente em cada requisição, permitindo que o servidor valide a identidade do usuário de forma eficiente e segura. 
+Com essa API, o Django facilita a implementação de autenticação baseada em tokens JWT em seus projetos, garantindo segurança e escalabilidade.
+
+> API Relation Model Rest Framework em DRF -> é uma extensão do Django Rest Framework que simplifica a criação de APIs RESTful para aplicativos Django. 
+Essa extensão facilita a definição e o gerenciamento de relacionamentos entre modelos Django, como chaves estrangeiras e muitos-para-muitos. 
+Com a API Relation Model, os desenvolvedores podem criar APIs mais poderosas e expressivas, manipulando facilmente consultas e atualizações relacionadas a modelos complexos. 
+Isso ajuda a tornar o desenvolvimento de APIs em Django mais eficiente e intuitivo, permitindo que os desenvolvedores se concentrem mais na lógica de negócios de suas aplicações.
+
+> Postman ->  Usdo para acesso a um ponto final de API protegido por token JWT usando o Postman envolvendo enviar uma solicitação HTTP contendo o token JWT no cabeçalho de autorização. 
+O Postman simplifica esse processo, permitindo que você insira o token JWT no cabeçalho de autorização da solicitação. 
+Ao enviar a solicitação, o servidor verifica o token JWT para autenticar o usuário e, se válido, permite o acesso ao ponto final protegido.
+
+
+
+> Heroku Server -> é o processo de implantar uma aplicação web em um servidor gerenciado pelo Heroku. 
+Esse processo envolve enviar o código-fonte do projeto para o Heroku, onde ele é construído, configurado e executado em contêineres. 
+O Heroku oferece suporte a uma variedade de tecnologias de desenvolvimento, como Python, Node.js e Ruby on Rails. 
+Depois que a aplicação é implantada, o Heroku cuida da infraestrutura, escalabilidade e monitoramento, permitindo que os desenvolvedores se concentrem no desenvolvimento da aplicação em si.
+
+
+
+Primeria fase:
+Back End(Django, SQlite) 
+
+
+Segunda fase:
+Front End(React JS)
+
+
