@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-+co#q-$twp#@-+0!0cy9ehj_7^+$o8vavr7v8m&qjqwl&yqanb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
 
 
@@ -46,16 +46,17 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",  # Deve estar antes do CommonMiddleware
+    "django.middleware.common.CommonMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
-    "django.middleware.common.CommonMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
 
 REST_FRAMEWORK={
     'DEFAULT_AUTHENTICATION':[
@@ -135,12 +136,24 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000",
+    "https://novo-livid.vercel.app",
+]
+
+
+import dj_database_url
+prod_db=dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
 
 import os
 MEDIA_URL="/media/"
