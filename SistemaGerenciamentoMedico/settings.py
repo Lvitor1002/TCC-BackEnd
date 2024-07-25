@@ -143,6 +143,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "*",
+    "https://novo-livid.vercel.app/",
+    "https://66a2a18c2aa1fd930692bb97--stately-dusk-f28753.netlify.app/"
 ]
 import os
 MEDIA_URL="/media/"
