@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-+co#q-$twp#@-+0!0cy9ehj_7^+$o8vavr7v8m&qjqwl&yqanb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.vercel.app', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -140,13 +140,8 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+CORS_ALLOW_ALL_ORIGINS = True
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "*",
-    "https://novo-livid.vercel.app/",
-    "https://66a2a18c2aa1fd930692bb97--stately-dusk-f28753.netlify.app/"
-]
 import os
 MEDIA_URL="/media/"
 MEDIA_ROOT=os.path.join(BASE_DIR,"media")
