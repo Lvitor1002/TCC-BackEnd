@@ -137,29 +137,36 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+    'OPTIONS',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-CORS_ALLOW_CREDENTIALS = True  # Se você estiver enviando cookies ou autenticação
+ # Se você estiver enviando cookies ou autenticação
 CORS_ALLOW_HEADERS = [
-    "content-type",
-    "authorization",
-    "x-csrftoken",
-    "accept",
+    'content-type',
+    'authorization',
+    'x-requested-with',
+    'accept',
+    'origin',
+    'x-csrftoken',
 ]
 
 
 
+CORS_ALLOW_CREDENTIALS = True 
 CORS_ALLOW_ALL_ORIGINS = True
 
-CORS_ALLOWED_ORIGINS = [
-    "https://novo-livid.vercel.app",
-    "https://www.novo-livid.vercel.app",
-]
+CORS_ALLOWED_ORIGINS = []
 
 
 
